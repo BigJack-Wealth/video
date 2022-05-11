@@ -1,0 +1,260 @@
+
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  
+
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7 no-js" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8 no-js" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en" class="no-js">
+
+
+<head>
+	<!-- Basic need -->
+	<title>FilmSea</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<link rel="profile" href="#">
+
+    <!--Google Font-->
+    <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Dosis:400,700,500|Nunito:300,400,600' />
+	<!-- Mobile specific meta -->
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone-no">
+
+	<!-- CSS files -->
+	<link rel="stylesheet" href="{% static 'css/style_.css' %}">
+	<link rel="stylesheet" href="{% static 'css/plugins.css' %}">
+
+</head>
+
+<body>
+<!--preloading-->
+<div id="preloader">
+    <img class="logo" src="{% static 'images/lol.png' %}" alt="" width="119" height="58">
+    <div id="status">
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<!--end of preloading-->
+<!--login form popup-->
+<div class="login-wrapper" id="login-content">
+    <div class="login-content">
+        <a href="#" class="close">x</a>
+        <a href="{% url 'login' %}"><h3>Click To <br>Login</h3></a>
+        
+    </div>
+</div>
+
+<div class="login-wrapper" id="logout-content">
+    <div class="login-content">
+        <a href="#" class="close">x</a>
+        <a href="{% url 'logout' %}"><h3>Click To <br>Log Out</h3></a>
+        
+    </div>
+</div>
+<!--end of login form popup-->
+<!--signup form popup-->
+<div class="login-wrapper"  id="signup-content">
+    <div class="login-content">
+        <a href="#" class="close">x</a>
+        <a href="{% url 'register' %}"><h3>Click To <br>Sign Up</h3></a>
+        
+    </div>
+</div>
+<!--end of signup form popup-->
+
+<!-- BEGIN | Header -->
+<header class="ht-header">
+	<div class="container">
+		<nav class="navbar navbar-default navbar-custom">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header logo">
+				    <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					    <span class="sr-only">Toggle navigation</span>
+					    <div id="nav-icon1">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+				    </div>
+				    <a href="{% url 'home' %}"><img class="logo" src="{% static 'images/lol.png' %}" alt="" width="119" height="58"></a>
+			    </div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav flex-child-menu menu-left">
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li><a href="{% url 'home' %}">Home</a></li>
+						
+						<li><a href="{% url 'movielist' %}">Trending</a></li>
+						
+						
+						<li><a href="{% url 'blog' %}">News</a></li>	
+
+						<!-- <li><a href="{% url 'pnv' %}">Fan's Favorite</a></li> -->
+
+					</ul>
+					<ul class="nav navbar-nav flex-child-menu menu-right">
+						
+						
+							
+						<li class="loginLink"><a href="{% url 'login' %}">LOG In</a></li>
+						<!-- <li class="loginLink"><a href="{% url 'logout' %}">LOG Out</a></li> -->
+						<li class="btn signupLink"><a href="{% url 'register' %}">sign up</a></li>
+					</ul>
+				</div>
+			<!-- /.navbar-collapse -->
+	    </nav>
+		<span>Welcome, {{request.user}}</span>
+		<span><a href="{% url 'logout' %}">Logout</a></span>
+	    
+	    </div> -->
+	</div>
+</header>
+<!-- END | Header -->
+
+<div class="hero common-hero">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="hero-ct">
+					<h1> Blogs </h1>
+					<ul class="breadcumb">
+						<li class="active"><a href="#">Home</a></li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- blog list section-->
+<div class="page-single">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9 col-sm-12 col-xs-12">
+				<div class="blog-item-style-1 blog-item-style-3">
+            		<img src="{% static 'images/uploads/drstrange.jpg' %}" alt="">
+            		<div class="blog-it-infor">
+            			<h3><a href="https://www.themovieblog.com/2022/05/doctor-strange-in-the-multiverse-of-madness-review/">In Marvel Studios’ Doctor Strange in the Multiverse of Madness, the MCU unlocks the Multiverse and pushes its boundaries further than ever before</a></h3>
+            			<span class="time">April 04 2022</span>
+            			
+            		</div>
+            	</div>
+            	<div class="blog-item-style-1 blog-item-style-3">
+            		<img src="{% static 'images/uploads/avatar.jpg' %}" alt="">
+            		<div class="blog-it-infor">
+            			<h3><a href="https://www.themovieblog.com/2022/04/first-look-at-avatar-the-way-of-water/">James Cameron is releasing his follow-up to his groundbreaking film this December! We are getting news and our First Look at Avatar: The Way of Water from CinemaCon. </a></h3>
+            			<span class="time">April 30 2022</span>
+            			<p>James Cameron is releasing his follow-up to his groundbreaking film this December! We are getting news and our First Look at Avatar: The Way of Water from CinemaCon.</p>
+            		</div>
+            	</div>
+				<div class="blog-item-style-1 blog-item-style-3">
+            		<img src="{% static 'images/uploads/sonic.jpg' %}" alt="">
+            		<div class="blog-it-infor">
+            			<h3><a href="https://jasonsmovieblog.com/2022/03/15/sonic-the-hedgehog-2-official-final-trailer/">The world’s favorite blue hedgehog is back for a next-level adventure in SONIC THE HEDGEHOG 2.e</a></h3>
+            			<span class="time">March 15 2022</span>
+            			<p>After settling in Green Hills, Sonic is eager to prove he has what it takes to be a true hero. His test comes when Dr. Robotnik returns, this time with a new partner, Knuckles, in search for an emerald that has the power to destroy civilizations. </p>
+            		</div>
+            	</div>
+            	<div class="blog-item-style-1 blog-item-style-3">
+            		<img src="{% static 'images/uploads/batman.jpg' %}" alt="">
+            		<div class="blog-it-infor">
+            			<h3><a href="blogdetail.html">THE BATMAN (2022) REVIEW</a></h3>
+            			<span class="time">March 11 2022</span>
+            			<p>Batman, the Cape Crusader, the Dark Knight, the Bat of Gotham….and so on and so forth. The character of the Batman has always been a fix point of fascination, finding the dual life of DC comic book creation Bruce Wayne, a wealthy philanthropist whose was orphaned at a young age drove him to become a crime fighting vigilantey</p>
+            		</div>
+            	</div>
+            	<div class="blog-item-style-1 blog-item-style-3">
+            		<img src="{% static 'images/uploads/will.jpg' %}" alt="">
+            		<div class="blog-it-infor">
+            			<h3><a href="blogdetail.html">Will Smith attacks and Blue Ivy’s dancing: the most viral moments from the Oscars</a></h3>
+            			<span class="time">March 28 2022</span>
+            			<p>When Chris Rock made an ill-advised about Jada Pinkett Smith being bald (she suffers from alopecia), Will Smith took offence and got on stage to hit the comedian, later telling him to: “Keep my wife’s name out of your fucking mouth.”</p>
+            		</div>
+            	</div>
+            	<div class="blog-item-style-1 blog-item-style-3">
+            		<img src="{% static 'images/uploads/obi.jpg' %}" alt="">
+            		<div class="blog-it-infor">
+            			<h3><a href="https://screenrant.com/obi-wan-kenobi-after-revenge-sith-canon-story/">What Happened To Obi-Wan After Revenge Of The Sith</a></h3>
+            			<span class="time">March 10 2022</span>
+            			<p>The Obi-Wan Kenobi Disney+ TV show is set ten years after the events of Star Wars: Episode III - Revenge of the Sith, a period of the Jedi Master's life that has only been explored a little before in canon</p>
+            		</div>
+            	</div>
+            	
+			</div>
+			
+		</div>
+	</div>
+</div>
+<!--end of blog list section-->
+<!-- footer section-->
+<footer class="ht-footer">
+	<div class="container">
+		<div class="flex-parent-ft">
+			<div class="flex-child-ft item1">
+				 
+				 <p>Magodo<br>
+				Lagos, Nigeria</p>
+				<p>Call us: <a href="#">(+234) 807 765 7165</a></p>
+			</div>
+			<div class="flex-child-ft item2">
+				<h4>Resources</h4>
+				<ul>
+					<li><a href="{% url 'about' %}">About</a></li> 
+					
+					<li><a href="#">Contact Us</a></li>
+					
+					<li><a href="{% url 'blog' %}">Blog</a></li>
+					
+				</ul>
+			</div>
+			<div class="flex-child-ft item3">
+				<h4>Legal</h4>
+				<ul>
+					<!-- <li><a href="#">Terms of Use</a></li>  -->
+					<li><a href="#">Privacy Policy</a></li>	
+					<li><a href="#">Security</a></li>
+				</ul>
+			</div>
+			<div class="flex-child-ft item4">
+				<h4>Account</h4>
+				<ul>
+					<li><a href="#">My Account</a></li> 
+					
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+	<div class="ft-copyright">
+		
+		<div class="backtotop">
+			<p><a href="#" id="back-to-top">Back to top  <i class="ion-ios-arrow-thin-up"></i></a></p>
+		</div>
+	</div>
+</footer>
+<!-- end of footer section-->
+
+<script src="js/jquery_.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/plugins2.js"></script>
+<script src="js/custom.js"></script>
+</body>
+
+
+</html>
+
+{% endblock content %}

@@ -1,0 +1,200 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  
+
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7 no-js" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8 no-js" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en" class="no-js">
+
+
+<head>
+	<!-- Basic need -->
+	<title>FilmSea</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<link rel="profile" href="#">
+
+    <!--Google Font-->
+    <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Dosis:400,700,500|Nunito:300,400,600' />
+	<!-- Mobile specific meta -->
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone-no">
+
+	<!-- CSS files -->
+	<link rel="stylesheet" href="{% static 'css/style_.css' %}">
+	<link rel="stylesheet" href="{% static 'css/plugins.css' %}">
+
+</head>
+
+<body>
+<!--preloading-->
+<div id="preloader">
+    <img class="logo" src="{% static 'images/lol.png' %}" alt="" width="119" height="58">
+    <div id="status">
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<!--end of preloading-->
+<!--login form popup-->
+<div class="login-wrapper" id="login-content">
+    <div class="login-content">
+        <a href="#" class="close">x</a>
+        <a href="{% url 'login' %}"><h3>Click To <br>Login</h3></a>
+        
+    </div>
+</div>
+
+<div class="login-wrapper" id="logout-content">
+    <div class="login-content">
+        <a href="#" class="close">x</a>
+        <a href="{% url 'logout' %}"><h3>Click To <br>Log Out</h3></a>
+        
+    </div>
+</div>
+<!--end of login form popup-->
+<!--signup form popup-->
+<div class="login-wrapper"  id="signup-content">
+    <div class="login-content">
+        <a href="#" class="close">x</a>
+        <a href="{% url 'register' %}"><h3>Click To <br>Sign Up</h3></a>
+        
+    </div>
+</div>
+<!--end of signup form popup-->
+
+<!-- BEGIN | Header -->
+<header class="ht-header">
+	<div class="container">
+		<nav class="navbar navbar-default navbar-custom">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header logo">
+				    <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					    <span class="sr-only">Toggle navigation</span>
+					    <div id="nav-icon1">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+				    </div>
+				    <a href="index-2.html"><img class="logo" src="{% static 'images/lol.png' %}" alt="" width="119" height="58"></a>
+			    </div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav flex-child-menu menu-left">
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li><a href="{% url 'home' %}">Home</a></li>
+						
+						<li><a href="{% url 'movielist' %}">Trending</a></li>
+						
+						
+						<li><a href="{% url 'blog' %}">News</a></li>	
+
+						<!-- <li><a href="{% url 'pnv' %}">Fan's Favorite</a></li> -->
+
+					</ul>
+					<ul class="nav navbar-nav flex-child-menu menu-right">
+						
+						
+							
+						<li class="loginLink"><a href="{% url 'login' %}">LOG In</a></li>
+						<!-- <li class="loginLink"><a href="{% url 'logout' %}">LOG Out</a></li> -->
+						<li class="btn signupLink"><a href="{% url 'register' %}">sign up</a></li>
+					</ul>
+				</div>
+			<!-- /.navbar-collapse -->
+	    </nav>
+		<span>Welcome, {{request.user}}</span>
+		<span><a href="{% url 'logout' %}">Logout</a></span>
+	    <!-- top search form -->
+	    <!-- <div class="top-search">
+	    	<select>
+				<option value="united">Movies</option> -->
+				<!-- <option value="saab">Others</option> -->
+			<!-- </select>
+			<input type="text" placeholder="Search for a movie, TV Show or celebrity that you are looking for">
+	    </div> -->
+	</div>
+</header>
+
+<div class="hero hero3">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<!-- <h1> movie listing - list</h1>
+				<ul class="breadcumb">
+					<li class="active"><a href="#">Home</a></li>
+					<li> <span class="ion-ios-arrow-right"></span> movie listing</li>
+				</ul> -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- celebrity single section-->
+
+<div class="page-single movie-single cebleb-single">
+	<div class="container">
+		<div class="row ipad-width">
+			<div class="col-md-4 col-sm-12 col-xs-12">
+				<div class="mv-ceb">
+					<img src="{% static 'images/uploads/jack.jpg' %}" alt="">
+				</div>
+			</div>
+			<div class="col-md-8 col-sm-12 col-xs-12">
+				<div class="movie-single-ct">
+					<h1 class="bd-hd">Emmanuel Jack</h1>
+					<p class="ceb-single">Programmer  | Musician</p>
+					<div class="social-link cebsingle-socail">
+					<a href="https://www.instagram.com/jackfromdjango/"><i class="ion-social-instagram"></i></a>
+					<a href="https://twitter.com/BigJackCODM"><i class="ion-social-twitter"></i></a>
+					<a href="https://www.youtube.com/BigJackCODM"><i class="ion-social-youtube"></i></a>
+					<a href="https://github.com/BigJack-Wealth"><i class="ion-social-github"></i></a>
+					</div>
+					<div class="movie-tabs">
+						<div class="tabs">
+							<ul class="tab-links tabs-mv">
+								<li class="active"><a href="#overviewceb">Biography</a></li>
+								
+								                      
+							</ul>
+						    <div class="tab-content">
+						        <div id="overviewceb" class="tab active">
+						            <div class="row">
+						            	<div class="col-md-8 col-sm-12 col-xs-12">
+						            		<p>Emmanuel Jack was born on the 22nd of July. He was born into a family of 5 children in Lagos Nigeria</p>.
+											<p> He started his music career for fun playing the bass guitar, but he took later realised that he can make a career from it.</p>
+											<p>He did that for some years, and later discovered his passion for tech. Then he started learning the basic of HTML with his phone and when he had his first laptop, he advanced his knowledge to the backend world of python Django.</p>
+											
+						            		
+										</div>
+									</div>
+								</div>
+							</div>
+							
+											
+											
+											
+<!-- celebrity single section-->
+
+
+<script src="js/jquery_.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/plugins2.js"></script>
+<script src="js/custom.js"></script>
+</body>
+
+
+</html>
+
+{% endblock content %}

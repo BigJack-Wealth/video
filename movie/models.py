@@ -1,6 +1,5 @@
 from distutils.command.upload import upload
 from email.mime import image
-from msilib.schema import Class
 from django.db import models
 from django.contrib.auth.models import User, AbstractUser
 from django.urls import reverse

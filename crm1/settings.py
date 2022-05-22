@@ -31,7 +31,11 @@ SECRET_KEY = 'django-insecure-d+j7gw$&6r-2&c3@5w97k$(e(p7-9w3kl9rkq8s^xr2j(p(nzm
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
+<<<<<<< HEAD
 DEBUG = True
+=======
+DEBUG = False
+>>>>>>> 1c057a100b7ac1af7cf983c5869123a6e6d8e06a
 
 ALLOWED_HOSTS = ['54.147.142.89','*']
 
@@ -135,6 +139,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+<<<<<<< HEAD
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'crm1/static')
@@ -147,6 +152,19 @@ MEDIA_URL = "/images/"
 MEDIA_ROOT = os.path.join(BASE_DIR, 'crm1/static/images')
 
 
+=======
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS =[
+                os.path.join(BASE_DIR, 'movie/static')
+]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'crm1/static')
+]
+>>>>>>> 1c057a100b7ac1af7cf983c5869123a6e6d8e06a
 LOGIN_REDIRECT_URL ='/'
 LOGOUT_REDIRECT_URL='login'
 
